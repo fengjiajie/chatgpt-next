@@ -75,7 +75,9 @@ export async function POST(req: NextRequest) {
               controller.enqueue(encoder.encode(content));
             }
           } catch (e) {
-            controller.error(e);
+            // controller.error(e);
+            controller.close();
+            return;
           }
         }
       });
