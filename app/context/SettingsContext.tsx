@@ -17,7 +17,7 @@ export interface SettingsState extends Omit<ChatRequest, 'messages'> {
 
 const INITIAL_SETTINGS: SettingsState = {
   model: Model['gpt-3.5-turbo'],
-  maxHistoryLength: 6,
+  maxHistoryLength: 50,
   availableModels: [Model['gpt-3.5-turbo']],
 };
 
