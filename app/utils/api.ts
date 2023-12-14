@@ -31,7 +31,9 @@ export const fetchApiChat = async ({
 
   // 如果返回错误，则直接抛出错误
   if (!fetchResult.ok) {
-    throw await getError(fetchResult);
+    // throw await getError(fetchResult);
+    // controller.abort(); // 中断请求
+    return ''; // 返回一个空字符串
   }
 
   // 使用 stream2string 来读取内容
