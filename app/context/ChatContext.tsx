@@ -207,11 +207,11 @@ export const ChatProvider: FC<{ children: ReactNode }> = ({ children }) => {
           return;
         }
         // 发生错误时，展示错误消息
-        setIsLoading(false);
-        setMessages([
-          ...newMessages,
-          { isError: true, role: Role.assistant, content: (e as ResError).message || (e as ResError).code.toString() },
-        ]);
+        // setIsLoading(false);
+        // setMessages([
+        //   ...newMessages,
+        //   { isError: true, role: Role.assistant, content: (e as ResError).message || (e as ResError).code.toString() },
+        // ]);
       }
     },
     [settings, messages, images, history, historyIndex, setAbortController],
