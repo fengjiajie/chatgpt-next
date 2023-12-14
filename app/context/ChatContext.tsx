@@ -206,6 +206,7 @@ export const ChatProvider: FC<{ children: ReactNode }> = ({ children }) => {
         if (e.name === 'AbortError') {
           return;
         }
+        return;
         // 发生错误时，展示错误消息
         // setIsLoading(false);
         // setMessages([
